@@ -1,0 +1,414 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rapport d'optimisation</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <!-- <img src="logo.png" alt=""><br> -->
+            Rapport d'optimisation<br>
+            La chouette agence
+        </h1> 
+        <nav>
+            <ul>
+                <li><a href="#analyse">Analyse</a></li>
+                <li><a href="#recommandations">Recommandations</a></li>
+                <li><a href="#comparaison">Comparaison des résultats</a></li>
+            </ul>
+            <ul>
+                <li><a href="">Site avant</a></li>
+                <li><a href="https://frederique27.github.io/Projet-LaChouetteAgence/" target="_blank">Site modifié</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="analyse">
+        <table>
+            <caption>Analyse de l'état actuel de SEO</caption>
+            <tr>
+                <th>Catégorie</th>
+                <th>Problème analysé</th>
+                <th>Bonne pratique à adopter</th>
+                <th>Explication du problème</th>
+                <th>Action recommandée</th>
+                <th>Référence</th>
+            </tr>
+            <tr>
+                <td>Accessibilité</td>
+                <td>L'attribut «lang» a la valeur «Default».</td>
+                <td>Changer la valeur «Default» pour la langue correspondant au texte de la page.</td>
+                <td>Plusieurs fonctions ne sont pas réalisées lorsque la langue n'est pas déclarée. Par exemple l'application d'un correcteur d’orthographe et de grammaire, des outils de traductions, des outils d'assistance...</td>
+                <td>Changer «Default» pour «Fr».</td>
+                <td><a href="https://www.w3.org/International/questions/qa-lang-why ">https://www.w3.org/International/questions/qa-lang-why </a></td>
+            </tr>
+            <tr>
+                <td>SEO</td>
+                <td>L'utilisation de la balise meta «keywords» est inutile.</td>
+                <td>Placer des mots-clés dans les balises «title» et «description».</td>
+                <td>La balise meta «keywords» n'est pas lu par Google et n'a plus aucun poids en SEO.</td>
+                <td>Supprimer la balise meta «keywords».</td>
+                <td><a href="https://www.definitions-seo.com/definition-de-balise-meta-keywords/">https://www.definitions-seo.com/definition-de-balise-meta-keywords/</a></td>
+            </tr>
+            <tr>
+                <td>SEO</td>
+                <td>La meta «description» n'a pas de contenu.</td>
+                <td>Ajouter une description en accord avec le titre et le contenu de la page.</td>
+                <td>Il y a un plus faible pourcentage de personnes qui vont cliquer sur le lien si la description n'est pas pertinente.</td>
+                <td>Insérer des mots-clés pertinents dans le contenu de la description. Cette description ne doit pas dépasser 230 caractères.</td>
+                <td><a href="https://web.dev/meta-description/?utm_source=lighthouse&utm_medium=devtools ">https://web.dev/meta-description/?utm_source=lighthouse&utm_medium=devtools</a><br><a href="https://smartkeyword.io/seo-on-page-balise-meta-description/ ">https://smartkeyword.io/seo-on-page-balise-meta-description/ </a></td>
+            </tr>
+            <tr>
+                <td>SEO</td>
+                <td>La balise «title» contient un «.»</td>
+                <td>Écrire un titre cohérent et en lien avec le contenu de la page. Ce titre doit être accrocheur et faire cliquer l'internaute.</td>
+                <td>Un titre pertinent est important puisque la balise «title» envoie un signal aux moteurs de recherches qui leur permet de trier, positionner et évaluer la page web.</td>
+                <td>Afficher dans la balise qui êtes vous?  Que faites vous? Le titre ne doit pas dépasser 55 caractères.</td>
+                <td><a href="https://www.thomascubel.com/balise-title-seo/ ">https://www.thomascubel.com/balise-title-seo/ </a></td>
+            </tr>
+            <tr>
+                <td>SEO</td>
+                <td>La sémantique du HTML n’est pas respectée (utilisation exclusive des balises div).</td>
+                <td>L'utilisation de balises sémantiques est recommandée pour aider les moteurs de recherches a définir les différentes parties de la page.</td>
+                <td>Les balises génériques, tel que les div ne donnent aucune information sur le rôle de ce contenu dans la page. Il est donc difficile pour les moteurs de recherche de définir quelle partie de la page est l’en-tête ou quelle partie de la page présente le message important par exemple.</td>
+                <td>Il vaut mieux utiliser des balises sémantiques telles que header, footer, nav, article.</td>
+                <td><a href="https://fr.semrush.com/blog/balises-structurelles-html-semantique/">https://fr.semrush.com/blog/balises-structurelles-html-semantique/</a></td>
+            </tr>
+            <tr>
+                <td>SEO<br>Accessibilité</td>
+                <td>L'attribut «alt» contient une liste de mots-clés (Black Hat - keywords stuffing).</td>
+                <td>Écrire une courte description de l'image. Cela améliorera l'expérience de l’utilisateur non-voyant et aidera les moteurs de recherche à mieux référencer l'image.</td>
+                <td>Le bourrage de mots-clés dans la balise «alt» est maintenant une pratique a bannir. Cela n'aide pas au référencement du site et nuit aux utilisateurs non-voyants qui ne comprennent pas ce qu'est l'image.</td>
+                <td>Écrire une description précise de l'image en moins de 100 caractères. Y intégrer un mot-clé et non une liste.</td>
+                <td><a href="https://www.redacteur.com/blog/seo-balise-alt-images/ ">https://www.redacteur.com/blog/seo-balise-alt-images/ </a></td>
+            </tr>
+            <tr>
+                <td>SEO<br>Accessibilité</td>
+                <td>Il y a des attributs «style» dans la page HTML.</td>
+                <td>L'utilisation d'attributs «inline style» n'est pas recommandée.</td>
+                <td>Il y a des attributs style dans le fichier HTML qui se répètent. 
+                    La bonne pratique DRY n'est donc pas appliquée. 
+                    Conséquences à l'utilisation du inline style:<br>
+                    -plus difficile de retravailler sur son code, lorsque le CSS est éparpillé dans différents fichiers,<br>
+                    -plus complexe de rendre le site «responsive»<br>
+                    -le inline style ne peut être mis en cache.</td>
+                <td>Supprimer les attributs style dans le HTML et mettre tout ce qui est CSS dans le fichier CSS.</td>
+                <td><a href="https://www.hostinger.fr/tutoriels/style-css/ ">https://www.hostinger.fr/tutoriels/style-css/ </a><br><a href="https://www.codecademy.com/articles/html-inline-styles ">https://www.codecademy.com/articles/html-inline-styles </a></td>
+            </tr>
+            <tr>
+                <td>SEO<br>Accessibilité</td>
+                <td>Les liens internes et externes ne sont pas optimisés.</td>
+                <td>S'assurer de l'utilité et de la pertinence des liens internes et externe. S'assurer que les «backlinks» pointent vers des contenus en relation avec la thématique du site.</td>
+                <td>Il y a trop de liens non pertinents. Par exemple, deux liens sur la page d'accueil qui mènent à la page d'accueil, des liens dans le «footer» qui mènent à une page 404. Trop de liens non pertinents ou qui mène nullpart peux être frustrant pour l'utilisateur.</td>
+                <td>Supprimer ou modifier les liens internes et externes. S'assurer que les «backlinks» ne soient pas hors contexte.</td>
+                <td><a href="https://www.oscar-referencement.com/15-conseils-seo-optimisation-url/">https://www.oscar-referencement.com/15-conseils-seo-optimisation-url/</a><br><a href="https://trafficmakers.fr/backlinks-seo-raisons-mefier/ ">https://trafficmakers.fr/backlinks-seo-raisons-mefier/ </a></td>
+            </tr>
+            <tr>
+                <td>SEO</td>
+                <td>Il n'y a pas de cache.</td>
+                <td>Mettre une mise en cache pour permettre un affichage plus rapide des pages.</td>
+                <td>Ajouter un cache diminu le nombre de requêtes et ainsi permet d'économiser du temps au chargement des fichiers. Un affichage lent des pages rend la navigation pénible.</td>
+                <td>Ajouter un fichier .htaccess.</td>
+                <td><a href="https://fr.ryte.com/magazine/utiliser-mise-cache-navigateur-accelerer-site-web/">https://fr.ryte.com/magazine/utiliser-mise-cache-navigateur-accelerer-site-web/</a></td>
+            </tr>
+            <tr>
+                <td>SEO</td>
+                <td>Il y a des mots-clé dissimulés dans le document (Black Hat - content cloaking)</td>
+                <td>La technique de «content cloaking» n'est pas recommandée. Ces mot-clés doivent donc être supprimés.</td>
+                <td>Ancienne technique utilisé qui appartient maintenant au Black Hat. Les techniques de Black Hat cherche a tromper les robots d'indexation. Ceci ne respecte pas les normes et les recommandations des moteurs de recherche et est donc déconseillé.</td>
+                <td>Supprimer les balises div contenant les mots-clés dissimulés.</td>
+                <td><a href="https://www.enjin.fr/referencement-tout-savoir-sur-le-texte-cache/ ">https://www.enjin.fr/referencement-tout-savoir-sur-le-texte-cache/ </a></td>
+            </tr>
+            <tr>
+                <td>SEO<br>Accessibilité</td>
+                <td>Le site n'est pas mobile-friendly.</td>
+                <td>Optimiser la navigation sur mobile.</td>
+                <td>Avertissement donné par Google en 2015: tous les sites doivent devenir compatibles avec la navigation mobile sous peine de se voir  pénalisé et déclassé dans les résultats de recherche. Rendre un site mobile friendly rend l'expérience plus agréable pour l'utilisateur. D'autant plus que le mobile est le moyen le plus utilisé pour accéder au web.</td>
+                <td>S'assurer que les pages soient adaptés aux mobiles afin que les utilisateurs n'aient pas a pincer ou a zoomer pour lire le contenu des pages.</td>
+                <td><a href="https://tobecom.fr/limportance-dun-site-mobile-friendly-seo/ ">https://tobecom.fr/limportance-dun-site-mobile-friendly-seo/ </a></td>
+            </tr>
+            <tr>
+                <td>SEO<br>Accessibilité</td>
+                <td>Deux images comporte du texte.</td>
+                <td>Remplacer les images par du texte.</td>
+                <td>L'utilisation d'images alourdi la page. On priorise alors le texte plutôt qu'une image. Les utilisateurs non-voyants ne peuvent pas savoir ce qui est écrit lorsque le texte est dans une image.</td>
+                <td>Retranscrire le texte des images dans une balise approprié (h, p, quote).</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>SEO</td>
+                <td>Les images sont redimensionnées par le CSS / Les images sont lourdes.</td>
+                <td rowspan="2">Utiliser un outil tel que <a href="https://www.iloveimg.com/">Iloveimg</a> pour optimiser les images afin qu'elles soient moins lourdes.</td>
+                <td rowspan="2">Des fichiers trop lourds ralentis le temps de chargement de la page. Un temps de chargement trop lent nuit au bon référencement et nuit a l’expérience utilisateur.</td>
+                <td>Redimensionner, et compresser les images.</td>
+                <td><a href="https://www.oscar-referencement.com/astuces-optimiser-images-referencement-naturel/ ">https://www.oscar-referencement.com/astuces-optimiser-images-referencement-naturel/ </a></td>
+            </tr>
+            <tr>
+                <td>SEO<br>Accessibilité</td>
+                <td>Les fichiers javascript, bootstrap et css sont lourds.</td>
+                <td>Minimiser les fichiers javascript, bootstrap et CSS.</td>
+                <td><a href="https://www.imperva.com/learn/performance/minification/">https://www.imperva.com/learn/performance/minification/</a></td>
+            </tr>
+            <tr>
+                <td id="count">count: 18</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="recommandations">
+        <table>
+            <caption>10 recommandations pour améliorer le SEO</caption>
+            <tr>
+                <th></th>
+                <th>Recommandations</td>
+                <th>Justification</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Optimiser les balises meta, le titre et la langue</td>
+                <td>Ces balises permettent aux robots des moteurs de recherche d'inspecter la page web, de l'évaluer, de l'indexer et de le positionner dans les SERP (page de résultats de recherche). C'est le premier facteur que Google prend en compte afin de référencer la page web. Il est donc bien important d'optimiser ces balises.<br><a href="https://agencethrive.fr/balises-meta-les-bonnes-pratiques-seo/">https://agencethrive.fr/balises-meta-les-bonnes-pratiques-seo/</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Remplacer les balises div pour des balises sémantique</td>
+                <td>Les balises sémantiques telles que header, footer, nav, section, article communique la structure de la page aux moteurs de recherche alors que l'utilisation de balises non sémantiques telles que les div et span ne donnent aucune information sur le rôle de ce contenu dans la page. <br>L'utilisation de balises sémantiques aide les moteurs de recherche ce qui améliore le référencement de la page.<br><a href="https://fr.semrush.com/blog/balises-structurelles-html-semantique/">https://fr.semrush.com/blog/balises-structurelles-html-semantique/</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Optimiser les liens internes et externes</td>
+                <td>Les backlinks qui pointent vers une source hors contexte de la page web peuvent nuire au référencement. Il n'aide pas à avoir un meilleur indice d'autorité.<br>Pour ce qui est de l'accessibilité, un lien interne ou externe qui mène à une page 404 ou nulle part peut être frustrant pour l'utilisateur. Il est donc important de vérifier et modifier ces liens. <br><a href="https://trafficmakers.fr/backlinks-seo-raisons-mefier/">https://trafficmakers.fr/backlinks-seo-raisons-mefier/</a> </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Supprimer les mauvaises pratiques (Black Hat)</td>
+                <td>L'utilisation de techniques Black Hat telles que le keywords stuffing et le content cloaking est à bannir. L'utilisation de techniques Black Hat peut aller jusqu'à une désindexation. Introuvable sur les moteurs de recherche, le site perd alors une valeur considérable. <br>Au niveau de l'accessibilité, une liste de mots-clés dans les balises alt n'aide pas la personne non voyante à savoir ce que représente l'image.<br><a href="https://www.redacteur.com/blog/seo-balise-alt-images/">https://www.redacteur.com/blog/seo-balise-alt-images/</a><br><a href="https://falia.co/black-hat-seo-comment-eviter-les-mauvaises-pratiques-en-seo/">https://falia.co/black-hat-seo-comment-eviter-les-mauvaises-pratiques-en-seo/</a></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Optimiser les images</td>
+                <td>Favoriser le format JPEG pour des images avec beaucoup de couleurs, dégradé de couleur et ombrage. <br>Favoriser le format PNG pour les logos ou une image où l'on doit utiliser la transparence. <br>Réduire la résolution de l'image (sans l'utilisation de CSS) et compresser l'image réduit son poids. Lorsque le poids de la page est moins lourd, la page se télécharge plus rapidement. Une page qui s'affiche plus rapidement améliore l'expérience de l'utilisateur.<br><a href="https://www.oscar-referencement.com/astuces-optimiser-images-referencement-naturel/">https://www.oscar-referencement.com/astuces-optimiser-images-referencement-naturel/</a></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Corriger les erreurs du validateur html et css du W3C</td>
+                <td>La correction des erreurs à l'aide du validateur W3C n'améliore pas le référencement mais le référencement prend en charge plusieurs paramètres et une erreur peut induire les moteurs de recherche en erreur et nuire au référencement. Avoir une page propre sans erreur est une bonne pratique à avoir.<br>Correction apportées: formulaire, bouton envoyer du formulaire, correction @media, correction des styles non reconnus. <br><a href="https://jaetheme.com/blog/w3c-referencement/">https://jaetheme.com/blog/w3c-referencement/</a></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Modifier les couleurs qui n'obtiennent pas le ratio de contraste exigé par les WCAG 2.0</td>
+                <td>Web Content Accessibility Guidelines (WCAG 2.0) exige un contraste de: 4:5:1 entre la couleur du texte et la couleur de l'arrière-plan. Lorsque le ratio exigé n'est pas respecté, cela rend difficile pour les personnes avec un handicap visuel de voir le texte. Respecter le ratio de contraste de couleur améliore donc l'accessibilité. <br><a href="https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/visual-audio-contrast-contrast.html">https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/visual-audio-contrast-contrast.html</a></td>            
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Utiliser l'attribut aria-label pour améliorer l'accessibilité</td>
+                <td>L'attribut aria-label permet d'indiquer une alternative textuelle qui sera lue par les technologies d'assistance. Les personnes avec un handicap visuel peuvent donc mieux déterminer le rôle d'un élément. Cet attribut n'étant pas visible sur la page, n'a que pour objectif d'améliorer l'accessibilité de la page en aidant les utilisateurs avec un handicap visuel.<br><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-label">https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-label</a></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Minifier les fichiers lourds</td>
+                <td>Minifier son code supprime les espaces, les sauts de lignes, les commentaires et les séparateurs de bloc. Minifier permet de réduire la quantité de code qui doit être transférée sur le web. Plus le code est léger, plus le site s'affichera rapidement. Un site rapide améliore l'expérience de l'utilisateur. <br><a href="http://www.thibautsoufflet.fr/pourquoi-et-comment-minifier-vos-fichiers-css-html-et-javascript/">http://www.thibautsoufflet.fr/pourquoi-et-comment-minifier-vos-fichiers-css-html-et-javascript/</a></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Mettre en place la Google Search console et Google Analytics</td>
+                <td>Ces deux outils facilitent l'optimisation du référencement naturel grâce aux données qu'ils relèvent et analysent, et aux services qu'ils fournissent. <br>La Search Console et Google Analytics ont été pensés comme des outils complémentaires. Google Analytics offre des informations précises sur les visites, le profil des internautes, leur situation géographique, etc., et la Search Console se concentre plutôt sur la sécurité et la conformité du site web, ses performances dans les résultats de recherche... <br><a href="https://www.reputationvip.com/fr/guide/outils/google-search-console-outil-indispensable-seo">https://www.reputationvip.com/fr/guide/outils/google-search-console-outil-indispensable-seo</a></td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="comparaison">
+        <h2>Comparaison des résultats</h2>
+        <h3>Première étape:</h3>
+        <p>Générer un rapport en l'état avant correction</p>
+        <div>
+            <div class="comparer">
+                <div>
+                    <p>GTMetrix</p>
+                    <img src="comparaisons/00avant/gtmetrix.png" alt="" class="largeimg">
+                </div>
+                <div>
+                    <p>Wave</p>
+                    <img src="comparaisons/00avant/wave.png" alt="" class="largeimg">
+                </div>
+            </div>
+            <div class="comparer">
+                <div>
+                    <p>Lighthouse</p>
+                    <img src="comparaisons/00avant/lighthouse.png" alt="" class="smallimg">
+                </div>
+                <div>
+                    <p>Page Weight</p>
+                    <img src="comparaisons/00avant/pageweight1.png" alt="" class="smallimg">
+                </div>
+            </div>
+        </div>
+        <p class="description">.</p>
+        <h3>Deuxième étape:</h3>
+        <p>Apporter les modifications des 10 recommandations</p>
+
+        <h4>Recommandation 1: Optimiser les balises meta, le titre et la langue</h4>
+        <p>Modifications apportées:
+            <ul>
+                <li>Modification des attributs «lang», «description» et «title»</li>
+                <li>Lang = Fr</li>
+                <li>Description = La chouette agence, une agence de web design basée à Lyon. Nous aidons les entreprises à devenir attractives et visibles sur Internet.</li>
+                <li>Title = Accueil/Contact - La chouette agence - Agence de web design basée à Lyon</li>
+                <li>Suppression de l'attribut «keywords»</li>
+            </ul>
+        </p>
+        <p>Résultats positifs sur l'outil Lighthouse +31 en performance, +3 en accessibilité, +24 en SEO</p>
+        <img src="comparaisons/0a1/lighthouse.png" alt="" class="smallimg">
+
+        <h4>Recommandation 2: Améliorer la sémantique du HTML</h4>
+        <p>Modifications apportées:
+            <ul>
+                <li>Remplacement des balises «div» par des balises sémantiques plus appropriées (header, footer, section, article).</li>
+                <li>Remplacement des éléments «span» des liens sociaux et de la section «nos services» par des icons.</li>
+            </ul>
+        </p>
+        <p>Résultats positifs sur l'outil Lighthouse +1 en performance <br>Sur le site Wave, une correction des balises apporte 17 éléments de structure. <br>Un bon référencement naturel dépend d'un nombre immense de petits détails. Une bonne structure avec l'utilisation pertinente de balises sémantiques est l'un de ces petits détails. Ces modifications sont indispensable puisqu'une bonne structure aide les moteurs de recherche à mieux interpréter le contenu et ainsi contribuer à un bon référencement.</p>
+        <img src="comparaisons/1a2/lighthouse2.png" alt="" class="smallimg">
+        <img src="comparaisons/1a2/wave.png" alt="" class="smallimg">
+
+        <h4>Recommandation 3: Optimiser les liens internes et externes</h4>
+        <div class="dpflex">
+            <div>
+                <p>Modifications apportées:
+                    <ul>
+                        <li>Modification du nom «page2» pour «Contact» dans la navigation ainsi que dans le deuxième fichier HTML.</li>
+                        <li>Redirection des liens internes (par exemple, le bouton «contact» redirigé vers la page de contact plutôt que vers la page index).</li>
+                        <li>Redirection des liens sociaux (par exemple, le lien Facebook redirigé vers la page Facebook plutôt que vers la page index.</li>
+                        <li>Ajout des attributs «target=_blank» et «rel=noreferrer/noopener». <br><a href="https://web.dev/external-anchors-use-rel-noopener/?utm_source=lighthouse&utm_medium=devtools">Lien pour en savoir plus sur l'importance de rel="noopener" et rel="noreferrer"</a></li>
+                        <li>Suppression des liens dans le footer de la page d'accueil (liens externes hors context).</li>
+                        <li>Ajout d'un URL à l'adresse mail sur la page contact. L'utilisateur peut communiquer plus facilement avec l'agence en cliquant sur l'adresse plutôt que de devoir la copier.</li>
+                    </ul>
+                </p>
+                <p>Comme affiché sur Wave, la suppression des liens a réduit le nombre d'éléments de structure à 14. <br>Cela a aussi réduit le nombre d'erreurs de contraste de couleurs à 7 soit 22 erreurs de moins. <br>Le nombre d'alertes a aussi diminué de 3. <br>Globalement ces modifications apportent une meilleur accessibilité.</p>
+            </div>
+            <img src="comparaisons/2a3/wave.png" alt="" class="medimg">
+        </div>
+        
+        <h4>Recommandation 4: Supprimer les mauvaises pratiques</h4>
+        <div class="dpflex">
+            <div>
+                <p>Modifications apportées:
+                    <ul>
+                        <li>Suppression des balises «div» utilisées pour du «content cloaking». Les éléments style en-ligne (inline-style) étant dans ces balises, ils ont égalemment pu être supprimés.</li>
+                        <li>Modification du contenu des atributs «alt» pour y écrire une description plutôt qu'une liste de mots-clés («keywords stuffing»).</li>
+                    </ul>
+                </p>
+                <p>Après avoir apporté ces modifications, sur l'outil Lighthouse nous obtenons +1 en performance. <br> Sur l'outil Wave, nous obtenons une amélioration au niveau des erreurs de contraste de couleurs (3 de moins) ainsi qu'une amélioration au niveau des alertes (4 de moins). Les alertes indiquent qu'il y a des liens redondants et que la hiérarchie des balises «h1» à «h6» n'est pas respectée à un endroit.</p>
+                <img src="comparaisons/3a4/lighthouse.png" alt="" class="smallimg">
+            </div>
+            <div>
+                <img src="comparaisons/3a4/wave.png" alt="" class="medimg">
+                <img src="comparaisons/3a4/wave1.png" alt="" class="medimg">
+            </div>
+        </div>
+
+        <h4>Recommandation 5: Optimiser les images</h4>
+        <div class="dpflex">
+            <div>
+                <p>Modifications apportées:
+                    <ul>
+                        <li>Suppression de 3 images qui ne contenait que du texte</li>
+                        <li>Conversion des images en JPG (sauf le logo et l'image «texture-paper» puisqu'on utilise de la transparence).</li>
+                        <li>Réduction de la résolution des images.</li>
+                        <li>Compression des images.</li>
+                    </ul>
+                </p>
+                <p>Sur l'outil GTmetrix, nous obtenons un score PageSpeed de 87% ce qui donne une augmentation de 23% ainsi qu'une amélioration au niveau de la rapidité de l'affichage de la page. La page prend maintenant 0.8s plutôt que 2.4s, soit une amelioration de 1.6s. <br>Sur l'outil Page Weight, nous obtenons un poids de page qui passe de niveau lourd à léger avec une réduction de 3327KB. Les images qui représentaient 94% du poids total de la page ne représentent maintenant que 49% du poids total. <br>Puisque j'ai remplacé 3 images par du texte que j'ai mis dans deux balises «h2» et dans une balise «blockquote», cela réduit le nombre d'alertes sur Wave de 1 (l'ajout de balises «h2» règle le problème de hiérarchie des balises «h1» à «h6» affiché sur Wave). Avec les ajouts de balises sémantiques, le nombre d'éléments de structure passe mainetant de 14 à 16.</p>
+                <img src="comparaisons/4a5/gtmetrixgood1.png" alt="">
+            </div>
+            <div>
+                <img src="comparaisons/4a5/pageweightgood1.png" alt="" class="medimg">
+                <img src="comparaisons/4a5/wave1.png" alt="" class="medimg">
+            </div>
+        </div>
+
+        <h4>Recommandation 6: Corriger les erreurs du validateur html et css du W3C</h4>
+        <div class="dpflex">
+            <div>
+                <p>Modifications apportées:
+                    <ul>
+                        <li>Déplacement des éléments «input» à l'intérieur des balises «label».</li>
+                        <li>Modification du nom des «id» et des «type» pour qu'ils soient en lien avec leur fonction.</li>
+                        <li>Remplacement du dernier élément «input» du formulaire pour l'élément «button».</li>
+                        <li>Suppresion de l'attribut «value» de l'élément «button». <br>Article W3Schools: The value of this attribute must be equal to the id attribute of a form element in the same document. <a href="https://www.w3schools.com/tags/att_button_form.asp">W3Schools</a></li>
+                        <li>Ajout des attributs «action» et «method» dans la balise «form» et suppression de «success-msg» et «fail-msg».</li>
+                        <li>Ajout d'une balise «address» et déplacement de l'adresse de contact dans cette balise. </li>
+                        <li>Supression du mot «device» des caractéristiques média «min-device-width» et «max-device-width». «min/max-device-width» autrement utilisé est maintenant obselète. <a href="https://developer.mozilla.org/fr/docs/Web/CSS/@media/device-width">Lien</a></li>
+                        <li>Supression des styles non reconnus tel que «padding-left: constant(safe-area-inset-left);» et «padding-right: constant(safe-area-inset-right);».</li>
+                    </ul>
+                </p>
+                <p>Ces modifications ont fait augmenter la note PageSpeed Score de l'outil GTmetrix de 1%. <br>Comme affiché sur l'outil Page Weight, le poids de la page a été réduit à 462KB, soit 1KB de moins. <br>Pour ce qui est de l'outil Lighthouse, nous obtenons +1 en performance et +3 en accessibilité.</p>
+                <img src="comparaisons/5a6/gtmetrix1.png" alt="">
+            </div>
+            <div>
+                <img src="comparaisons/5a6/pageweight.png" alt="" class="medimg">
+                <img src="comparaisons/5a6/lighthouse.png" alt="" class="medimg">
+            </div>
+        </div>
+
+        <h4>Recommandation 7: Avoir un bon ratio de contraste selon les exigences de conformité du WCAG 2.0 + taille police</h4>
+        <div class="dpflex">
+            <div>
+                <p>Modifications apportées:
+                    <ul>
+                        <li>Augmentation de la taille de police des éléments «p» qui avaient une taille de 11px pour une taille de 13px.</li>
+                        <li>Modification des couleurs qui ne passaient pas les exigences de contraste de couleur WCAG 2.0. Utilisation de l'outil Wave pour déterminer quels textes et arrière-plans n'obtenaient pas le ratio exigé. Ensuite, utilisation du site <a href=" https://app.contrast-finder.org/ ">Contrast-finder</a> qui m'a généré des choix de couleurs avec un ratio de contraste conforme.</li>
+                        <li>************changements de couleur aux H1, certains H2, au background des 2 boutons contact et le bouton envoyer du formulaire, ainsi que le footer</li>
+                    </ul>
+                </p>
+                <p>Sur l'outil Lighthouse, nous obtenons +5 en accessibilité. <br>Sur Wave, nous pouvons remarquer qu'il n'y a plus d'erreurs de contraste de couleurs.</p>
+                <img src="comparaisons/6a7/lighthouse.png" alt="" class="smallimg">
+            </div>
+                <img src="comparaisons/6a7/wave.png" alt="" class="medimg">
+        </div>
+
+        <h4>Recommandation 8: Ajouter l'attribut «aria-label» pour avoir une meilleur accessibilité</h4>
+        <div class="dpflex">
+            <div>
+                <p>Modifications apportées:
+                    <ul>
+                        <li>Ajout de l'attribut «aria-label».</li>
+                        <li>Ajout de focus sur les éléments activable.</li>
+                        <li>Ajout d'attributs «ARIA landmarks».</li>
+                    </ul>
+                </p>
+                <p>Comme affiché sur l'outil Wave, nous pouvons remarqué un ajout de 11 attributs «aria-label». En ajoutant des attributs aria-label aux liens sociaux, cela supprime les 4 dernières alertes affichées. <br>Pour ce qui est de l'outil Lighthouse, nous remarquons une augmentation de 5 en accessibilité pour obtenir la note 100.</p>
+                <img src="comparaisons/7a8/lighthouse.png" alt="">
+            </div>
+                <img src="comparaisons/7a8/wave.png" alt="" class="medimg">
+        </div>
+
+        <h4>Recommandation 9: Minimiser les fichiers lourds <br>Recommandation 10: Mettre en place la Google Search Console et Google Analytics</h4>
+        <div class="dpflex">
+            <div>
+                <p>Modifications apportées:
+                    <ul>
+                        <li>utilisation de ce site pour minifier les fichiers css html et js <br><a href="https://php-minify.com/ ">https://php-minify.com/ </a></li>
+                    </ul>
+                </p>
+                <p>Augmentation de bla bla bla</p>
+                <img src="comparaisons/8a9/gtmetrixgood11.png" alt="">
+                <img src="comparaisons/8a9/gtmetrixgood22.png" alt="">
+                
+            </div>
+            <div>
+                <img src="comparaisons/8a9/wave.png" alt="" class="medimg">
+                <img src="comparaisons/8a9/pageweightgood.png" alt="" class="medimg">
+                <img src="comparaisons/8a9/lighthouse.png" alt="" class="medimg">
+            </div>
+        </div>
+
+
+
+
+    </section>
+    
+</body>
+</html>
